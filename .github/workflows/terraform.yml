@@ -12,6 +12,7 @@ jobs:
   terraform:
     runs-on: ubuntu-latest
     name: Validate Terraform module
+    working-directory: ./terraform
 
     steps:
       - name: Checkout repository
@@ -24,14 +25,12 @@ jobs:
           terraform_version: 1.6.0
 
       - name: Terraform init
-        run: terraform -chdir=terraform init -backend=false
+        run: terraform init
 
       # Check Terraform formatting
       - name: Check Terraform format
-        run: terraform fmt -check -recursive terraform
-        working-directory: ./
+        run: terraform fmt
 
       # Validate Terraform syntax
       - name: Terraform validate
-        run: terraform validate terraform
-        working-directory: ./
+        run: terraform validate
