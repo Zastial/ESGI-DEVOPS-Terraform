@@ -1,5 +1,7 @@
 # infra-devops
 
+Author: Alexandre CAROL
+
 ## Structure du projet
 
 ```
