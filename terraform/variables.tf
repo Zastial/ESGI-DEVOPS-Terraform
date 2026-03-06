@@ -9,7 +9,7 @@ variable "app_env" {
 }
 
 variable "api_port" {
-  description = "The port for the API service"
+  description = "The port for the API servicee"
   type        = number
 }
 
