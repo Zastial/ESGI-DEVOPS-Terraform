@@ -21,15 +21,17 @@ jobs:
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
         with:
-          terraform_version: 1.6.0  # adapte selon ta version
+          terraform_version: 1.6.0
+
+      - name: Terraform init
+        run: terraform init -backend=false terraform
 
       # Check Terraform formatting
       - name: Check Terraform format
         run: terraform fmt -check -recursive terraform
-        working-directory: ./  # ou le chemin de ton module
-        # Le job échouera si le format est incorrect
+        working-directory: ./
 
       # Validate Terraform syntax
       - name: Terraform validate
         run: terraform validate terraform
-        working-directory: ./  # idem, chemin du module
+        working-directory: ./
