@@ -26,11 +26,14 @@ jobs:
 
       - name: Terraform init
         run: terraform init
+        working-directory: ./terraform
 
       # Check Terraform formatting
       - name: Check Terraform format
         run: terraform fmt
+        working-directory: ./terraform
 
       # Validate Terraform syntax
       - name: Terraform validate
         run: terraform validate
+        working-directory: ./terraform
