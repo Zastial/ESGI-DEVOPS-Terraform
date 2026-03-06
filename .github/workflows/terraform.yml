@@ -24,7 +24,7 @@ jobs:
           terraform_version: 1.6.0
 
       - name: Terraform init
-        run: terraform init -backend=false terraform
+        run: terraform init terraform
 
       # Check Terraform formatting
       - name: Check Terraform format
