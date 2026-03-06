@@ -4,7 +4,7 @@ variable "project_name" {
 }
 
 variable "app_env" {
-  description = "The application environment"
+  description = "The application environment
   type        = string
 }
 
