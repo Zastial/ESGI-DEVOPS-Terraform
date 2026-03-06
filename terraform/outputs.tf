@@ -4,9 +4,9 @@ output "network_name" {
 }
 
 output "api_url" {
-  value       = "http://localhost:${var.api_port}"
+  value = "http://localhost:${var.api_port}"
 }
 
 output "adminer_url" {
-  value       = "http://localhost:${var.adminer_port}"
+  value = "http://localhost:${var.adminer_port}"
 }
